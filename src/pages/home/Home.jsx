@@ -1,7 +1,11 @@
+import { Outlet } from "react-router-dom";
+import Banner from "../../components/banner/Banner";
+
 const Home = () => {
     return (
         <div>
-            Home
+            <Banner></Banner>
+            <Outlet></Outlet>
         </div>
     );
 };
