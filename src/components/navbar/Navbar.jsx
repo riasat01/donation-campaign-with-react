@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <div className="max-w-7xl m-auto">
             <nav className={`flex justify-between items-center ${location.pathname === '/' && 'absolute'}`}>
-            <section><img className="h-16 w-36 md:ml-5 lg:ml-0" src="/public/Resources/Logo.png" alt="donation campaign logo" /></section>
+            <section><img className="h-16 w-36 md:ml-5 lg:ml-0" src="./Resources/Logo.png" alt="donation campaign logo" /></section>
             <section className={`hidden md:block ${location.pathname === '/' && 'md:ml-[300px] lg:ml-[870px]'}`}>
                 <ul className="flex items-center gap-12">
                     <li>

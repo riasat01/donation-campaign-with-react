@@ -1,5 +1,5 @@
 .bannerBg{
-    background-image: url('/public/Resources/banner.jpg'),linear-gradient(rgba(255, 255, 255, 0.95),rgba(255, 255, 255, 0.95));
+    background-image: url('/public/Resources/banner.jpg'),linear-gradient(rgba(255, 255, 255, 0.80),rgba(255, 255, 255, 0.80));
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
