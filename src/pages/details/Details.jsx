@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import './Details.css'
+import swal from 'sweetalert';
 
 const Details = () => {
 
@@ -27,16 +29,16 @@ const Details = () => {
                 console.log(donation.id, details.id, donation.id === details.id);
                 return donation.id === details.id});
             if(exists){
-                alert(`duplicates not allowed`);
+                swal("Warning!", "Duplicates not allowed", "error");
             }else{
                 donations.push(details);
                 localStorage.setItem('donations', JSON.stringify(donations));
-                alert(`added successfully`);
+                swal("Good job!", "Donation Successful!", "success");
             }
         }else{
             temp.push(details)
             localStorage.setItem('donations', JSON.stringify(temp));
-            alert('added successfully');
+            swal("Good job!", "Donation Successful!", "success");
         }
 
     }
@@ -45,8 +47,8 @@ const Details = () => {
             <img className="w-full h-[500px] rounded-lg" src={img} alt={`${category_title} image`} />
             <h1 className="text-5xl font-bold text-[#0B0B0B]">{category_title}</h1>
             <p className="text-[#0B0B0B] opacity-70 leading-8 text-justify">{category_description}</p>
-            <section style={{backgroundColor: 'rgba(11, 11, 11, 11,0.9)'}} className="rounded-lg py-14 pl-16 absolute w-full top-[294px]">
-                <input onClick={() => handleDonation(details)} style={{backgroundColor: text_color}} className="opacity-100 py-2 px-5 text-white rounded text-xl font-semibold" type="button" value={`Donate $${donation_amount}`} />
+            <section className="btnBg rounded-lg py-14 pl-16 absolute w-full top-[294px]">
+                <input onClick={() => handleDonation(details)} style={{backgroundColor: text_color}} className="py-2 px-5 text-white rounded text-xl font-semibold" type="button" value={`Donate $${donation_amount}`} />
             </section>
         </div>
     );

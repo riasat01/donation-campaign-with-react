@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Cell, Legend, Pie, PieChart } from "recharts";
+import { Cell, Pie, PieChart } from "recharts";
 
 const Statistics = () => {
 
@@ -76,11 +76,11 @@ const Statistics = () => {
                                 </Pie>
                             </PieChart>
                         </div>
-                        <div className="flex justify-center items-center mb-12 gap-6">
+                        <div className="flex justify-center items-center mb-12 gap-2 md:gap-6">
                             <p>Your Donation</p>
-                            <div className="h-3 w-24 bg-[#00C49F]"></div>
+                            <div className="h-3 w-12 md:w-24 bg-[#00C49F]"></div>
                             <p>Total Donation</p>
-                            <div className="h-3 w-24 bg-[#FF444A]"></div>
+                            <div className="h-3 w-12 md:w-24 bg-[#FF444A]"></div>
                         </div>
                     </section>
 
