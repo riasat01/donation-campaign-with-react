@@ -10,7 +10,7 @@ const Donation = () => {
     useEffect(() => {
         const _ = JSON.parse(localStorage.getItem(`donations`));
         setDonations(_);
-        console.log(donations);
+        // console.log(donations);
     }, []);
 
     useEffect(() => {

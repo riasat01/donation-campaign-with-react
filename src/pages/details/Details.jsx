@@ -16,7 +16,7 @@ const Details = () => {
         // console.log(details);
     }, [])
 
-    const { category_title, img, category_description, donation_amount } = details;
+    const { category_title, img, category_description, donation_amount, text_color } = details;
 
     const handleDonation = details => {
         const temp  = [];
@@ -41,12 +41,12 @@ const Details = () => {
 
     }
     return (
-        <div className="relative my-12 space-y-12">
+        <div className="relative my-24 md:my-12 space-y-12">
             <img className="w-full h-[500px] rounded-lg" src={img} alt={`${category_title} image`} />
             <h1 className="text-5xl font-bold text-[#0B0B0B]">{category_title}</h1>
             <p className="text-[#0B0B0B] opacity-70 leading-8 text-justify">{category_description}</p>
-            <section className="bg-[#0B0B0B] opacity-50 rounded-lg py-14 pl-16 absolute w-full top-[294px]">
-                <input onClick={() => handleDonation(details)} className="py-2 px-5 text-white bg-[#FF444A] rounded text-xl font-semibold" type="button" value={`Donate $${donation_amount}`} />
+            <section style={{backgroundColor: 'rgba(11, 11, 11, 11,0.9)'}} className="rounded-lg py-14 pl-16 absolute w-full top-[294px]">
+                <input onClick={() => handleDonation(details)} style={{backgroundColor: text_color}} className="opacity-100 py-2 px-5 text-white rounded text-xl font-semibold" type="button" value={`Donate $${donation_amount}`} />
             </section>
         </div>
     );
